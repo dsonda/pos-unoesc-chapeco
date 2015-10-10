@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aula HTML 5</title>
+  <meta charset="utf-8">
+  <style type="text/css">.menu li {display: inline-block;}</style>
+</head>
+<body>
+  <nav>
+    <ul id="menu-list">
+      <li class="item"><a href="" title=""></a>Primeiro</li>
+      <li class="item"><a href="" title=""></a>Segundo</li>
+      <li class="item"><a href="" title=""></a>Terceiro</li>
+      <li class="item"><a href="" title=""></a>Quarto</li>
+    </ul>
+  </nav>
+
+  <input type="text" id="novoItem" value="" placeholder="Nome do novo item">
+  <input type="button" value="Adicionar" onclick="adicionaItem(novoItem.value)">
+
+  <script>
+    var itens = document.getElementsByClassName("item");
+    console.log(itens);
+
+    function adicionaItem(valor) {
+      document.getElementById("menu-list").innerHTML += "<li class='item'>" + valor + "</li>";
+    }
+  </script>
+</body>
+</html>
