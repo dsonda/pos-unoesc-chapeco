@@ -17,14 +17,21 @@
 
   <input type="text" id="novoItem" value="" placeholder="Nome do novo item">
   <input type="button" value="Adicionar" onclick="adicionaItem(novoItem.value)">
+  <input type="button" value="Listar" onclick="listar()">
+
 
   <script>
-    var itens = document.getElementsByClassName("item");
-    console.log(itens);
 
     function adicionaItem(valor) {
       document.getElementById("menu-list").innerHTML += "<li class='item'>" + valor + "</li>";
     }
+
+    function listar() {
+      var itens = document.getElementsByClassName("item");
+      console.log(itens);      
+    }
+
+    listar();
   </script>
 </body>
 </html>
