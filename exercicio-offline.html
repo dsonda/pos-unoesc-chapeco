@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercicio online/offline</title>
+    <script>
+
+      function titleFlick(){
+        
+        if (navigator.onLine) {
+          document.title = 'On line';
+        }
+        else {
+          document.title = 'Off line';
+        }
+
+      }
+
+      setInterval(titleFlick,500);
+
+     </script>
+   </head>
+
+   <body>
+     Verificando...
+   </body>
+ </html>
