@@ -13,14 +13,14 @@ Em propriedades do tipo *animatable*, que são propriedades que podem mudar grad
 ```css
 /* Standard syntax */
 seletor {
-  transition-property: [property];
-  transition-duration: [time];
-  transition-timing-function: [timing];
-  transition-delay: [time];
+  transition-property: none|all|property|initial|inherit;
+  transition-duration: time|initial|inherit;
+  transition-timing-function: ease|linear|ease-in|ease-out|ease-in-out|cubic-bezier()|initial|inherit;
+  transition-delay: time|initial|inherit;
 }
 /* Short syntax */
 seletor {
-  transition: [property] [time] [timing] [time];
+  transition: property duration timing-function delay|initial|inherit;
 }
 ```
 ##### Exemplo de uso
@@ -49,50 +49,50 @@ Em qualquer elemento do tipo *transformable*, cujo layout é controlado pelo *CS
 ##### Como usar:
 As transformações 2D são:
 ```css
-/* translate: move o elemento no eixo X (à direita) e Y (abaixo) */
+/* translate: move o elemento no eixo X (à direita) e Y (abaixo) em pixels */
 seletor {
-  transform: translate([x-pixels],[y-pixels]);
+  transform: translate(x,y);
 }
 /* rotate: gira o elemento em X graus em sentido horário (positivo) ou anti-horário (negativo) */
 seletor {
-  transform: rotate([degrees]);
+  transform: rotate(angle);
 }
 /* scale: aumenta ou diminui o tamanho original do elemento no número de vezes informado para a largura e 
-altura*/
+altura */
 seletor {
-  transform: scale([*width],[*height]);
+  transform: scale(x,y);
 }
-/* skewX: torce ou inclina o elemento no eixo X, conforme os graus informados */
+/* skewX: torce ou inclina o elemento no eixo X, conforme o ângulo informado */
 seletor {
-  transform: skewX([degrees]);
+  transform: skewX(angle);
 }
-/* skewY: torce ou inclina o elemento no eixo Y, conforme os graus informados */
+/* skewY: torce ou inclina o elemento no eixo Y, conforme o ângulo informado */
 seletor {
-  transform: skewY([degrees]);
+  transform: skewY(angle);
 }
-/* skew: torce ou inclina o elemento no eixo X e Y, conforme os graus informados */
+/* skew: torce ou inclina o elemento no eixo X e Y, conforme os ângulos informados */
 seletor {
-  transform: skew([x-degrees],[y-degrees]);
+  transform: skew(x-angle,y-angle);
 }
 /* matrix: combina todos os métodos anteriores em um só, passando 6 parâmetros representando uma matriz que 
 será utilizada para transformar o elemento */
 seletor {
-  transform: matrix([p1],[p2],[p3],[p4],[p5],[p6]);
+  transform: matrix(n,n,n,n,n,n);
 }
 ```
 As transformações 3D são:
 ```css
-/* rotateX: gira o elemento no eixo X, conforme os graus informados */
+/* rotateX: gira o elemento no eixo X, conforme o ângulo informado */
 seletor {
-  transform: rotateX([degrees]);
+  transform: rotateX(angle);
 }
-/* rotateY: gira o elemento no eixo Y, conforme os graus informados */
+/* rotateY: gira o elemento no eixo Y, conforme o ângulo informado */
 seletor {
-  transform: rotateY([degrees]);
+  transform: rotateY(angle);
 }
-/* rotateZ: gira o elemento no eixo Z, conforme os graus informados */
+/* rotateZ: gira o elemento no eixo Z, conforme o ângulo informado */
 seletor {
-  transform: rotateZ([degrees]);
+  transform: rotateZ(angle);
 }
 ```
 ##### Exemplo de uso
@@ -122,19 +122,19 @@ Em propriedades do tipo animatable, que são propriedades que podem mudar gradua
 ##### Como usar:
 ```css
 /* código de animação (de..para) */
-@keyframes seletor-animacao {
-  from {[property]: [value];}
-  to {[property]: [value];}
+@keyframes animationname  {
+  from {css-styles;}
+  to {css-styles;}
 }
 /* código de animação (escala de percentuais) */
-@keyframes seletor-animacao {
-  [percent] {[property]: [value];}
+@keyframes animationname  {
+  0% {css-styles;}
   ...
-  [percent] {[property]: [value];}
+  100% {css-styles;}
 }
 /* aplicação da animação ao elemento */
 seletor {
-  animation-name: [seletor-animacao];
+  animation-name: animationname;
 }
 ```
 ##### Exemplo de uso
@@ -180,14 +180,14 @@ Em elementos que exibam texto.
 ##### Como usar:
 ```css
 seletor {
-  column-count: [número];
-  column-gap: [pixels];
-  column-rule-style: [estilo-linha];
-  column-rule-width: [pixels];
-  column-rule-color: [color];
-  column-rule: [pixels] [estilo-linha] [color];
-  column-span: [número];
-  column-width: [pixels];
+  column-count: number|auto|initial|inherit;
+  column-gap: length|normal|initial|inherit;
+  column-rule-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
+  column-rule-width: medium|thin|thick|length|initial|inherit;
+  column-rule-color: color|initial|inherit;
+  column-rule: column-rule-width column-rule-style column-rule-color|initial|inherit;
+  column-span: 1|all|initial|inherit;
+  column-width: auto|length|initial|inherit;
 }
 ```
 ##### Exemplo de uso
@@ -209,22 +209,22 @@ h2 {
 </div>
 ```
 
-#### Funcionalidade: 5
+#### Funcionalidade: resize
 ##### O que é?
-Texto.
+Permite ao usuário redimensionar um elemento HTML.
 ##### Onde usar:
-Texto.
+Qualquer elemento.
 ##### Como usar:
 ```css
 seletor {
-  ?
+  resize: none|both|horizontal|vertical|initial|inherit;
 }
 ```
 ##### Exemplo de uso
-Texto.
+Permite ao usuário aumentar ou reduzir a altura do elemento *div*.
 ```css
 div {
-  ?
+  resize: vertical;
 }
 ```
 
@@ -344,5 +344,7 @@ div {
 
 ### Referências:
 [http://www.w3schools.com/css/default.asp](http://www.w3schools.com/css/default.asp)
+
+[http://www.w3schools.com/cssref/](http://www.w3schools.com/cssref/)
 
 [http://www.w3.org/TR/css3-transitions/](http://www.w3.org/TR/css3-transitions/)
