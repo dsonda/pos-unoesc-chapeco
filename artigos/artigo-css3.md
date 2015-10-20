@@ -334,22 +334,34 @@ O exemplo abaixo exibe um menu alinhado à esquerda caso a janela tenha mais que
 </div>
 ```
 
-#### Funcionalidade: 8
+#### Funcionalidade: backgrounds
 ##### O que é?
-Texto.
+Conjunto de propriedades para configurar o fundo de um elemento, sendo possível adicionar múltiplas imagens:
+
+- `background-image` - imagem ou imagens a serem exibidas.
+- `background-position` - posição da imagem no fundo.
+- `background-repeat` - define se a imagem será repetida até preencher o espaço.
+- `background-size`- tamanho da imagem a ser exibida.
+- `background-origin` - define a origem da posição da imagem.
+- `background-clip` - define a área de desenho da imagem.
+
 ##### Onde usar:
-Texto.
+Em qualquer elemento que seja deseja exibir uma imagem de fundo.
 ##### Como usar:
 ```css
 seletor {
-  ?
+  background-image: url|none|initial|inherit;
+  background-size: auto|length|cover|contain|initial|inherit;
+  background-origin: padding-box|border-box|content-box|initial|inherit;
+  background-clip: border-box|padding-box|content-box|initial|inherit;     
 }
 ```
 ##### Exemplo de uso
-Texto.
+A imagem cobrirá toda a janela do browser, centralizada e mantendo a proporção original, sem barras de rolagem.
 ```css
-div {
-  ?
+html {
+  background: url(img_flower.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 ```
 
