@@ -114,7 +114,178 @@ div:hover {
 }
 ```
 
-### Referencia:
+#### Funcionalidade: 3
+##### O que é?
+Texto.
+##### Onde usar:
+Texto.
+##### Como usar:
+```css
+seletor {
+  ?
+}
+```
+##### Exemplo de uso
+Texto.
+```css
+div {
+  ?
+}
+```
+
+#### Funcionalidade: 4
+##### O que é?
+Texto.
+##### Onde usar:
+Texto.
+##### Como usar:
+```css
+seletor {
+  ?
+}
+```
+##### Exemplo de uso
+Texto.
+```css
+div {
+  ?
+}
+```
+
+#### Funcionalidade: 5
+##### O que é?
+Texto.
+##### Onde usar:
+Texto.
+##### Como usar:
+```css
+seletor {
+  ?
+}
+```
+##### Exemplo de uso
+Texto.
+```css
+div {
+  ?
+}
+```
+
+#### Funcionalidade: 6
+##### O que é?
+Texto.
+##### Onde usar:
+Texto.
+##### Como usar:
+```css
+seletor {
+  ?
+}
+```
+##### Exemplo de uso
+Texto.
+```css
+div {
+  ?
+}
+```
+
+#### Funcionalidade: 6
+##### O que é?
+Texto.
+##### Onde usar:
+Texto.
+##### Como usar:
+```css
+seletor {
+  ?
+}
+```
+##### Exemplo de uso
+Texto.
+```css
+div {
+  ?
+}
+```
+
+#### Funcionalidade: 7
+##### O que é?
+Texto.
+##### Onde usar:
+Texto.
+##### Como usar:
+```css
+seletor {
+  ?
+}
+```
+##### Exemplo de uso
+Texto.
+```css
+div {
+  ?
+}
+```
+
+#### Funcionalidade: 8
+##### O que é?
+Texto.
+##### Onde usar:
+Texto.
+##### Como usar:
+```css
+seletor {
+  ?
+}
+```
+##### Exemplo de uso
+Texto.
+```css
+div {
+  ?
+}
+```
+
+#### Funcionalidade: 9
+##### O que é?
+Texto.
+##### Onde usar:
+Texto.
+##### Como usar:
+```css
+seletor {
+  ?
+}
+```
+##### Exemplo de uso
+Texto.
+```css
+div {
+  ?
+}
+```
+
+#### Funcionalidade: 10
+##### O que é?
+Texto.
+##### Onde usar:
+Texto.
+##### Como usar:
+```css
+seletor {
+  ?
+}
+```
+##### Exemplo de uso
+Texto.
+```css
+div {
+  ?
+}
+```
+
+### Referências:
 [http://www.w3schools.com/css/default.asp](http://www.w3schools.com/css/default.asp)
 
 [http://www.w3.org/TR/css3-transitions/](http://www.w3.org/TR/css3-transitions/)
