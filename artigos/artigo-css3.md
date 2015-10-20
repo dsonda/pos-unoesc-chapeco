@@ -296,23 +296,42 @@ Exibe um container com três itens dispostos em coluna e centralizados verticalm
 </div>
 ```
 
-#### Funcionalidade: 7
+#### Funcionalidade: media queries
 ##### O que é?
-Texto.
+A instrução `@media` foi introduzida no CSS2 para identificar o tipo de mídia (tela de computador, impressora, dispositivos mobibe, TV) e a aplicar estilos diferentes para cada um. No CSS3, em vez de verificar o tipo do dispositivo, é possível consultar as características e capacidades do mesmo, como por exemplo a largura e altura da janela, largura e altura da tela, orientação (retrato ou paisagem) e a resolução.
 ##### Onde usar:
-Texto.
+Numa página para dispositivos móveis, para ajustar o layout conforme a orientação da tela.
 ##### Como usar:
 ```css
-seletor {
-  ?
+/* mediatype = all|print|screen|speech */
+@media not|only mediatype and (expressions) {
+    CSS-Code;
 }
 ```
 ##### Exemplo de uso
-Texto.
+O exemplo abaixo exibe um menu alinhado à esquerda caso a janela tenha mais que 480 pixels de largura. Caso contrário, o menu ficará no topo, ocupando toda a largura disponível.
 ```css
-div {
-  ?
+#leftsidebar {float: none;width: auto;}
+
+.menuitem {
+  background:lightblue;
+  border-radius:4px;
+  list-style-type:none;
+  margin:4px;
+  padding:2px;
 }
+
+@media screen and (min-width: 480px) {
+    #leftsidebar {width:200px;float:left;}
+}
+
+<div id="leftsidebar">
+  <ul id="menulist">
+    <li class="menuitem">Menu-item 1</li>
+    <li class="menuitem">Menu-item 2</li>
+    <li class="menuitem">Menu-item 3</li>
+ </ul>
+</div>
 ```
 
 #### Funcionalidade: 8
