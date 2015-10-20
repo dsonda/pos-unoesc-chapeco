@@ -57,7 +57,8 @@ seletor {
 seletor {
   transform: rotate([degrees]);
 }
-/* scale: aumenta ou diminui o tamanho original do elemento no número de vezes informado para a largura e altura*/
+/* scale: aumenta ou diminui o tamanho original do elemento no número de vezes informado para a largura e 
+altura*/
 seletor {
   transform: scale([*width],[*height]);
 }
@@ -73,7 +74,8 @@ seletor {
 seletor {
   transform: skew([x-degrees],[y-degrees]);
 }
-/* matrix: combina todos os métodos anteriores em um só, passando 6 parâmetros representando uma matriz que será utilizada para transformar o elemento */
+/* matrix: combina todos os métodos anteriores em um só, passando 6 parâmetros representando uma matriz que 
+será utilizada para transformar o elemento */
 seletor {
   transform: matrix([p1],[p2],[p3],[p4],[p5],[p6]);
 }
