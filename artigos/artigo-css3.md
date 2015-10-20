@@ -162,23 +162,51 @@ div {
 }
 ```
 
-#### Funcionalidade: 4
+#### Funcionalidade: multi-column
 ##### O que é?
-Texto.
+Permite formatar um elemento para exibir texto em múltiplas colunas, como em um jornal. É possível definir:
+
+ - `column-count` - quantidade de colunas.
+ - `column-gap` - espaço entre as colunas, em pixels.
+ - `column-rule-style` - estilo da linha divisória entre as colunas.
+ - `column-rule-width` - largura da linha divisória entre as colunas.
+ - `column-rule-color` - cor da linha divisória entre as colunas.
+ - `column-rule` - todas as opções da linha divisória numa propriedade apenas.
+ - `column-span` - a quantidade de colunas que o texto irá ocupar (geralmente o título).
+ - `column-width` - sugere uma largura para as colunas.
+
 ##### Onde usar:
-Texto.
+Em elementos que exibam texto.
 ##### Como usar:
 ```css
 seletor {
-  ?
+  column-count: [número];
+  column-gap: [pixels];
+  column-rule-style: [estilo-linha];
+  column-rule-width: [pixels];
+  column-rule-color: [color];
+  column-rule: [pixels] [estilo-linha] [color];
+  column-span: [número];
+  column-width: [pixels];
 }
 ```
 ##### Exemplo de uso
-Texto.
+Elemento *div* irá exibir o texto em duas colunas, sendo que o título ocupará apenas a primeira coluna.
 ```css
-div {
-  ?
+.colunas {
+  column-count: 2;
+  column-gap: 50px;
+  column-rule: 1px solid black;
 }
+
+h2 {
+  column-span: 1;
+}
+
+<div class="colunas">
+  <h2>Título</h2>
+  Texto do div que será exibido em duas colunas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+</div>
 ```
 
 #### Funcionalidade: 5
