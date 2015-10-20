@@ -228,42 +228,72 @@ div {
 }
 ```
 
-#### Funcionalidade: 6
+#### Funcionalidade: flexbox
 ##### O que é?
-Texto.
-##### Onde usar:
-Texto.
-##### Como usar:
-```css
-seletor {
-  ?
-}
-```
-##### Exemplo de uso
-Texto.
-```css
-div {
-  ?
-}
-```
+É um modo de layout novo no CSS3, que garante que os elementos se comportem de maneira previsível quando for necessário suportar diversas resoluções de tela e dispositivos. O flexbox é um container, cujos itens podem se posicionar em diversas direções e ajustar as dimensões para se adaptarem ao espaço disponível, ao longo de uma linha.
+Propriedades do container flexbox:
 
-#### Funcionalidade: 6
-##### O que é?
-Texto.
+- `display` - define o tipo do container.
+- `direction` - define do container na página.
+- `flex-direction` - define a direção da disposição dos itens dentro do container.
+- `justify-content` - define o alinhamento horizontal dos itens dentro do container.
+- `align-items` - define o alinhamento vertical dos itens dentro do container.
+- `flex-wrap` - define se os itens irão automaticamente quebrar a linha na estrutura.
+- `align-content` - define o alinhamento do conteúdo dentro do container (linhas).
+
+Propriedades dos itens do container flexbox:
+
+- `order` - define a ordem do item.
+- `margin` - define a margem do item.
+- `align-self` -  define o alinhamento vertical do item, sobrepondo a propriedade `align-items` do container.
+- `flex` - define a proporção do item dentro do container.
 ##### Onde usar:
-Texto.
+Definição da estrutura de uma página.
 ##### Como usar:
 ```css
+/* container flexbox */
 seletor {
-  ?
+  display: flex|inline-flex|<outros>;
+  direction: ltr|rtl|initial|inherit;
+  flex-direction: row|row-reverse|column|column-reverse|initial|inherit;
+  justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;
+  align-items: stretch|center|flex-start|flex-end|baseline|initial|inherit;
+  flex-wrap: nowrap|wrap|wrap-reverse|initial|inherit;
+  align-content: stretch|center|flex-start|flex-end|space-between|space-around|initial|inherit;
+}
+
+/* item de container flexbox */
+seletor {
+  order: number|initial|inherit;
+  margin: length|auto|initial|inherit;
+  align-self: auto|stretch|center|flex-start|flex-end|baseline|initial|inherit;
+  flex: flex-grow flex-shrink flex-basis|auto|initial|inherit;
 }
 ```
 ##### Exemplo de uso
-Texto.
+Exibe um container com três itens dispostos em coluna e centralizados verticalmente, com margem automática entre os mesmos.
 ```css
-div {
-  ?
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  background-color: lightgrey;
 }
+
+.flex-item {
+  background-color: cornflowerblue;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+<div class="flex-container">
+  <div class="flex-item">flex item 1</div>
+  <div class="flex-item">flex item 2</div>
+  <div class="flex-item">flex item 3</div>  
+</div>
 ```
 
 #### Funcionalidade: 7
