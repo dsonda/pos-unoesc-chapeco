@@ -114,22 +114,51 @@ div:hover {
 }
 ```
 
-#### Funcionalidade: 3
+#### Funcionalidade: animation
 ##### O que é?
-Texto.
+Permite aplicar animações a maior parte dos elementos HTML sem utilizar JavaScript ou Flash, alterando quantas propriedades e quantas vezes quiser. Basicamente, você especifica o valores inicial, intermediários e final da propriedade (via *keyframes*), além da duração do efeito, atraso no início (delay), quantas vezes será executado, a direção (reversa ou alternada) e a curva de velocidade do efeito (Ex: mais rápida no início e mais lenta no final).
 ##### Onde usar:
-Texto.
+Em propriedades do tipo animatable, que são propriedades que podem mudar gradualmente de um valor para outro, como tamanho, números, percentual e cores.
 ##### Como usar:
 ```css
+/* código de animação (de..para) */
+@keyframes seletor-animacao {
+  from {[property]: [value];}
+  to {[property]: [value];}
+}
+/* código de animação (escala de percentuais) */
+@keyframes seletor-animacao {
+  [percent] {[property]: [value];}
+  ...
+  [percent] {[property]: [value];}
+}
+/* aplicação da animação ao elemento */
 seletor {
-  ?
+  animation-name: [seletor-animacao];
 }
 ```
 ##### Exemplo de uso
-Texto.
+O keyframes define uma animação progressiva, alterando a cor e posição do elemento, fazendo com que ele se mova na tela contornando um quadrado imaginário, no sentido horário. Após, um elemento *div* recebe a animação com as respectivas opções.
 ```css
+@keyframes animacao {
+  0%   {background-color: red; left:0px; top:0px;}
+  25%  {background-color: yellow; left:200px; top:0px;}
+  50%  {background-color: blue; left:200px; top:200px;}
+  75%  {background-color: green; left:0px; top:200px;}
+  100% {background-color: red; left:0px; top:0px;}
+}
+
 div {
-  ?
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: animacao;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 ```
 
