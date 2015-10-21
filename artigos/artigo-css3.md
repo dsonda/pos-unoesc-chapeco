@@ -450,8 +450,6 @@ div.rotate_right {
 ```
 
 ### Referências:
-[http://www.w3schools.com/css/default.asp](http://www.w3schools.com/css/default.asp)
-
-[http://www.w3schools.com/cssref/](http://www.w3schools.com/cssref/)
-
+[http://www.w3schools.com/css/default.asp](http://www.w3schools.com/css/default.asp)</br>
+[http://www.w3schools.com/cssref/](http://www.w3schools.com/cssref/)</br>
 [http://www.w3.org/TR/css3-transitions/](http://www.w3.org/TR/css3-transitions/)
