@@ -365,22 +365,25 @@ html {
 }
 ```
 
-#### Funcionalidade: 9
+#### Funcionalidade: border images
 ##### O que é?
-Texto.
+Utilizar uma imagem como borda de um elemento, definindo como a imagem será cortada e se as seções do meio da borda deverão esticar a imagem ou repeti-la. A imagem sempre será cortada em nove pedaços: quatro cantos, quatro  lados e um centro.
 ##### Onde usar:
-Texto.
+Em qualquer elemento que suporte a propriedade `border`.
 ##### Como usar:
 ```css
 seletor {
-  ?
+  border: border-width border-style border-color|initial|inherit;
+  border-image: source slice width outset repeat|initial|inherit;
 }
 ```
 ##### Exemplo de uso
-Texto.
+A imagem será cortada em pedaços de 30 pixels, que serão ajustados automaticamente para preencher toda a extensão da borda do elemento.
 ```css
-div {
-  ?
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
 }
 ```
 
