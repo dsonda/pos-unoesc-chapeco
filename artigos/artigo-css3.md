@@ -387,23 +387,66 @@ A imagem será cortada em pedaços de 30 pixels, que serão ajustados automatica
 }
 ```
 
-#### Funcionalidade: 10
+#### Funcionalidade: shadow effects
 ##### O que é?
-Texto.
+Adicionar efeito de sombra a um texto ou elemento HTML, como um *div* ou imagem, definindo a espessura horizontal e vertical da sombra, cor e efeito (esfumaçado). É possível aplicar mais de uma sombra ao mesmo tempo, mesclando os efeitos. As propriedades utilizadas são:
+
+- `text-shadow` - define a sombra de um texto.
+- `box-shadow` - define a sombra de um elemento.
+
 ##### Onde usar:
-Texto.
+Qualquer texto ou elemento HTML que se deseje aplicar um efeito de borda. Pode se criar um álbum de fotos com efeito "polaroid", como no exemplo abaixo.
 ##### Como usar:
+Para aplicar várias sombras ao mesmo tempo, informe cada conjunto de propriedades separadas por vírgula.
 ```css
+/* sombra em texto */
 seletor {
-  ?
+  text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;
+}
+
+/* sombra em elemento HTML */
+seletor {
+  box-shadow: none|h-shadow v-shadow blur spread color |inset|initial|inherit;
 }
 ```
 ##### Exemplo de uso
-Texto.
+A imagem será cortada em pedaços de 30 pixels, que serão ajustados automaticamente para preencher toda a extensão da borda do elemento.
 ```css
-div {
-  ?
+h1 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
+
+<h1>Texto com sombra em vermelho e azul criando um efeito neon</h1>
+```
+Exibe duas imagens inclinadas e sobrepostas com efeito "polaroid", como se fosse duas fotos, uma sobre a outra.
+```css
+div.polaroid {
+  width: 294px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+div.rotate_left {
+  float: left;
+  transform: rotate(7deg);
+}
+
+div.rotate_right {
+  float: left;
+  transform: rotate(-8deg);
+}
+
+<div class="polaroid rotate_left">
+  <img src="pulpitrock.jpg" alt="Pulpit rock" width="284" height="213">
+  <p class="caption">The pulpit rock in Lysefjorden, Norway.</p>
+</div>
+
+<div class="polaroid rotate_right">
+  <img src="cinqueterre.jpg" alt="Monterosso al Mare" width="284" height="213">
+  <p class="caption">Monterosso al Mare. One of the five villages in Cinque Terre.</p>
+</div>
 ```
 
 ### Referências:
