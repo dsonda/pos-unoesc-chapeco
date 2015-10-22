@@ -23,7 +23,23 @@ No lugar de apresentar para o cliente modelos estáticos, é possível criar des
 #####4) Onde usar?
 No desenvol vimento de sistemas responsivos que necessitem de uma de interface com o usuário padronizada e bem definida. Sites estáticos, onde a reutilização de componentes não se faz tão necessário, podem não se beneficiar muito desta metodologia. 
 #####5) Exemplos:
-Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla. 
+######Átomos
+```html
+<input type="submit" value="Submit">
+```
+######Moléculas
+```html
+<form>
+  Pesquise no site: <input type="text" name="busca">
+  <input type="submit" value="Pesquisar">
+</form>
+```
+######Organismos
+![Organismo](http://bradfrost.com/wp-content/uploads/2013/06/organism2.jpg)
+######Templates
+![Template](http://bradfrost.com/wp-content/uploads/2013/06/template1.jpg)
+######Pages
+![Página](http://bradfrost.com/wp-content/uploads/2013/06/page1.jpg)
 #####6) Referências
 [http://tableless.com.br/o-que-e-design-atomic/](http://tableless.com.br/o-que-e-design-atomic/)</br>
 [http://pt.slideshare.net/bradfrostweb/atomic-design](http://pt.slideshare.net/bradfrostweb/atomic-design)</br>
